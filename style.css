@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Georgia', serif;
+
+  /* Maa Durga background */
+  background-image: url("durga.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  overflow: hidden;
+}
+
+/* Greeting Card */
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid #ff4500;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.card h1 {
+  color: #ffd700;
+  font-size: 2.5em;
+  margin: 0 0 10px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.card p {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.card h2 {
+  margin-top: 15px;
+  color: #ff6347;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Music Button */
+#music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 165, 0, 0.9);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+  transition: 0.3s;
+}
+#music-btn:hover {
+  background: #ff6600;
+}
+
+/* Falling Flowers */
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  top: -30px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
